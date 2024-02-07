@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: black;
+  color: white;
+}
+
+.lContainer {
+  width: 35vw;
+  padding: 10px;
+}
+
+.home {
+  padding: 10px;
+}
+
+.home ul li {
+  list-style: none;
+  width: 14px;
+  display: flex;
+  gap: 8px;
+  padding-top: 14px;
+}
+
+.bg-black {
+  background-color: black;
+  color: white;
+}
+
+.bg-grey {
+  background-color: #0e0f0f;
+}
+
+.library {
+  gap: 8px;
+  min-height: 80vh;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  padding-top: 14px;
+  padding: 23px 14px;
+  font-weight: bold;
+  align-items: center;
+  position: sticky;
+}
+.header h2 {
+  color: #dbdbdb;
+  font-size: 16px;
+}
+.header .add {
+  position: static;
+  right: 50px;
+}
+.footer {
+  display: flex;
+  position: absolute;
+  gap: 13px;
+  padding: 10px 0;
+  color: gray;
+  font-size: 14px;
+  font-weight: bold;
+  bottom: 0;
+}
+.footer a {
+  color: gray;
+  text-decoration: none;
+}
+
+.rContainer {
+  width: 100%;
+  margin: 16px 0;
+  position: relative;
+}
+
+.right-header {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  color: transparent;
+  background-color: #252525;
+}
+.right-header > * {
+  margin: 10px;
+  padding: 10px;
+}
+
+/*Button start*/
+#buttons > * {
+  margin: 0 10px;
+}
+.right-header button {
+  width: 80px;
+  padding: 6px;
+  margin: 2px;
+  border-radius: 50px;
+  /* background-color: rgb(255, 0, 51); */
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s, border 0.3s;
+}
+.sign-btn {
+  background-color: #252525;
+  color: white;
+}
+.log-btn {
+  background-color: #151515;
+  color: #ffffff;
+}
+
+.sign-btn:hover {
+  background-color: #ffffff;
+  color: #252525;
+}
+.sign-btn:active {
+  transform: scale(0.95);
+}
+.sign-btn:focus {
+  outline: none;
+  /* box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5); */
+}
+.log-btn:hover {
+  background-color: #54545491;
+  color: whitesmoke;
+}
+.log-btn:active {
+  transform: scale(0.95);
+}
+.log-btn:focus {
+  outline: none;
+  /* box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5); */
+}
+.play-btn {
+  position: absolute;
+  top: 120px; /* Initial position */
+  right: 18px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s, 0.5s;
+}
+.card-body.toggle:hover .play-btn {
+  opacity: 1; /* Make the bubbles visible */
+  top: 110px; /* Move the bubbles up */
+}
+/*Button end*/
+
+.animesong-playlist {
+  padding: 16px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  /* font-weight: bold; */
+}
+
+.song-cards {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  max-height: 70vh;
+}
+.song-cards {
+  padding-top: 10px;
+  margin: 10px;
+}
+
+.card-body {
+  width: 150px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #252525;
+  position: relative;
+}
+.content > * {
+  padding-top: 8px;
+}
+.card-img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: #0e0f0f 0px 0px 10px 0px;
+}
+
+.card-body p {
+  font-size: 12px;
+}
+
+.bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.bubbles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff3cac;
+  background-image: linear-gradient(
+    to right,
+    #b8cbb8 0%,
+    #b8cbb8 0%,
+    #b465da 0%,
+    #cf6cc9 33%,
+    #ee609c 66%,
+    #ee609c 100%
+  );
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.bubbles li:nth-child(1) {
+  left: 15%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.bubbles li:nth-child(2) {
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.bubbles li:nth-child(3) {
+  left: 30%;
+  width: 10px;
+  height: 10px;
+  animation-delay: 4s;
+}
+
+.bubbles li:nth-child(4) {
+  left: 20%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.bubbles li:nth-child(5) {
+  left: 35%;
+  width: 10px;
+  height: 10px;
+  animation-delay: 0s;
+}
+
+.bubbles li:nth-child(6) {
+  left: 35%;
+  width: 55px;
+  height: 55px;
+  animation-delay: 3s;
+}
+
+.bubbles li:nth-child(7) {
+  left: 15%;
+  width: 65px;
+  height: 65px;
+  animation-delay: 7s;
+}
+
+.bubbles li:nth-child(8) {
+  left: 25%;
+  width: 12px;
+  height: 12px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.bubbles li:nth-child(9) {
+  left: 10%;
+  width: 7.5px;
+  height: 7.5px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.bubbles li:nth-child(10) {
+  left: 35%;
+  width: 65px;
+  height: 65px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  50% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}

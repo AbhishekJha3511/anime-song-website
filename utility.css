@@ -1,0 +1,53 @@
+.border{
+    border: 2px solid rgb(255, 0, 0);
+    margin: 3px;
+}
+
+.invert {
+  filter: invert(1);
+}
+
+/* Style the scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Set the width of the scrollbar */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: #333; /* Set the color of the scroll handle */
+    border-radius: 6px; /* Round the corners of the scroll handle */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Set the color when hovering over the scroll handle */
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #222; /* Set the color of the scroll track */
+  }
+  
+  /* Handle on the track */
+  ::-webkit-scrollbar-track-piece {
+    background: #444; /* Set the color of the part of the track not covered by the handle */
+  }
+
+.flex{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.items-center{
+    align-items: center;
+}
+.rounded{
+    border-radius: 5px;
+}
+.m-1{
+    margin: 5px;
+}
+.p-1{
+    padding: 10px;
+}
