@@ -1,3 +1,6 @@
+:root{
+  --a:0;
+}
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +11,7 @@ body {
 }
 
 .lContainer {
-  width: 35vw;
+  width: 30vw;
   padding: 10px;
 }
 
@@ -137,16 +140,21 @@ body {
   outline: none;
   /* box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5); */
 }
-.play-btn {
+.playbtn {
   position: absolute;
   top: 120px; /* Initial position */
   right: 18px;
-  opacity: 0; /* Initially hidden */
+  opacity: var(--a); /* Initially hidden */
   transition: opacity 0.5s, 0.5s;
 }
-.card-body.toggle:hover .play-btn {
+.cardBody:hover .playbtn {
   opacity: 1; /* Make the bubbles visible */
   top: 110px; /* Move the bubbles up */
+}
+.cardBody:hover{
+  background-color: #373737;
+  cursor: pointer;
+  --a: 1;
 }
 /*Button end*/
 
@@ -156,25 +164,28 @@ body {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   /* font-weight: bold; */
 }
+.animesong-playlist h2{
+  padding: 16px;
+}
 
-.song-cards {
+.songCards {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 70vh;
-}
-.song-cards {
   padding-top: 10px;
-  margin: 10px;
+  margin: 30px;
+  
 }
 
-.card-body {
+.cardBody {
   width: 150px;
   padding: 10px;
   border-radius: 5px;
   background-color: #252525;
   position: relative;
+
 }
 .content > * {
   padding-top: 8px;
@@ -189,6 +200,21 @@ body {
 .card-body p {
   font-size: 12px;
 }
+
+.hamburger{
+  display: none;
+}
+.close-ham{
+  display: none;
+}
+
+.ham-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
 
 .bubbles {
   position: absolute;
