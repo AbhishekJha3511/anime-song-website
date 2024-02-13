@@ -120,34 +120,6 @@ async function displayAlbums() {
   });
 }
 
-// let songCards = document.querySelector(".songCards");
-//   let array = Array.from(anchors);
-//   for (let index = 0; index < array.length; index++) {
-//     const e = array[index];
-//     if (e.href.includes("/songs/")) {
-//       let folder = e.href.split("/").slice(-1)[0];
-//       //Get the meta data of the folder
-//       let a = await fetch(`http://127.0.0.1:5500/songs/${folder}/info.json`);
-//       let response = await a.json();
-//       console.log(response);
-//       songCards.innerHTML =
-//         songCards.innerHTML +
-//         `<div data-folder="kk" class="cardBody">
-//         <div class="playbtn">
-//             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="#cc0059">
-//                 <circle cx="12" cy="12" r="10" stroke="none" />
-//                 <path d="M9.5 16V8L16 12L9.5 16Z" fill="#ffffff" stroke-linejoin="round"/>
-//             </svg>
-//         </div>
-//         <img src="/songs/${folder}/cover.jpg" alt="">
-//         <h4>${response.title}</h4>
-//         <p>${response.description}</p>
-//     </div>`;
-//     }
-//   }
-// }
-///////////////
-
 async function main() {
   // get songs
   await getSongs("songs/kk");
